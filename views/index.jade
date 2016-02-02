@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1 Apartment List 
+  table.table.table-striped.table-hover
+    thead
+      tr
+        th#names Name
+        th#rent Rent
+        th Picture url
+        th Rooms
+        th
+    tbody
+      tr#template(style='display:none')
+        td.name
+        td.rent
+        td.picurl
+        td.rooms
+        td.remove  
+  a(href='/form')
+    button.btn.btn-primary.showItems Add Apartment
+  a(href='/userform')
+    button.btn.btn-info.showItems Add Tenant
+  script(src='javascripts/main.js')

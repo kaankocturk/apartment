@@ -1,0 +1,34 @@
+extends layout
+block content
+  h1 Apartment
+  .row
+    .col-xs-4  
+      ul Apartment Information
+        li Name = #{name}
+        li Rent = #{rent}
+        li Rooms = #{numrooms}
+        //- img(src= '#{picurl}')
+  .row
+    ul.rooms Rooms
+      each room in rooms 
+        li(data-roomID=room.numroom)= "Room # " +room.numroom +" "+ ((room.tenant) ? room.tenant: "is empty.")
+        //- li= #{room.numroom}
+        //- option(value=i) Book #{book}
+      //- each #{values} in #{rooms}
+      //-   each id,val in #{values}
+      //-     li= id + ': ' + val
+  script(src='../javascripts/apartment.js')  
+//- 
+//- {"books": ["A", "B", "C"]}
+//- 
+//- { rooms:
+//-    [ { _id: 56b03d5a6392c34ec1326d95, numroom: 1 },
+//-      { _id: 56b03d5a6392c34ec1326d94, numroom: 2 },
+//-      { _id: 56b03d5a6392c34ec1326d93, numroom: 3 },
+//-      { _id: 56b03d5a6392c34ec1326d92, numroom: 4 },
+//-      { _id: 56b03d5a6392c34ec1326d91, numroom: 5 },
+//-      { _id: 56b03d5a6392c34ec1326d90, numroom: 6 },
+//-      { _id: 56b03d5a6392c34ec1326d8f, numroom: 7 },
+//-      { _id: 56b03d5a6392c34ec1326d8e, numroom: 8 },
+//-      { _id: 56b03d5a6392c34ec1326d8d, numroom: 9 },
+//-      { _id: 56b03d5a6392c34ec1326d8c, numroom: 10 } ],}
